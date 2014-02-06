@@ -5,6 +5,12 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$('.friend h3 a').click(listenerFunction);
+
+function listenerFunction(e){
+	e.preventDefault();
+	$(this).text(anagrammedName($(this).text()));
+}
 /*
  * Function that is called when the document is ready.
  */
